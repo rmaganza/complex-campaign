@@ -1,7 +1,6 @@
 ####### FASCE ORARIE + GIORNI
 
-indexes_notte <- c(grep("00_", colnames(df)), grep("01_", colnames(df)), grep("02_", colnames(df)),
-                   grep("03_", colnames(df)), grep("04_", colnames(df)), grep("05_", colnames(df)))
+indexes_notte <- c(grep("00_00", colnames(df)), grep("00_30", colnames(df)), grep("01_", colnames(df)), grep("02_", colnames(df)), grep("03_", colnames(df)), grep("04_", colnames(df)), grep("05_", colnames(df)))
 
 indexes_notte_feriali <- indexes_notte[indexes_notte <= 263]
 feriale_notte <- rowSums(df[,indexes_notte_feriali])
