@@ -1,20 +1,12 @@
-
-colnames(df)[1458]<-"feelings_curiosita"
-colnames(df)[1493]<-"feelings_felicita"
-colnames(df)[1558]<-"feelings_poverta"
-colnames(df)[1531]<-"feel_negativemotions"
-colnames(df)[1532]<-"feel_negativebehaviour"
-
-colnames(df)[1530]<-"feel_negative"
-colnames(df)[1536]<-"feel_nostalgia"
-colnames(df)[1544]<-"feel_outgoing"
-colnames(df)[1556]<-"feel_positive"
-colnames(df)[1572]<-"feel_reserved"
-colnames(df)[1585]<-"feel_selfrealization"
-colnames(df)[1590]<-"feel_sitelistblindnositlist"
-colnames(df)[1599]<-"feel_stress"
-colnames(df)[1608]<-"feel_thoughtfull"
-
+feel_negative <- df[,1530]
+feel_nostalgia <- df[,1536]
+feel_outgoing <- df[,1544]
+feel_positive <- df[,1556]
+feel_reserved <- df[,1572]
+feel_selfrealization <- df[,1585]
+feel_sitelistblindnositlist <- df[,1590]
+feel_stress <- df[,1599]
+feel_thoughtful <- df[,1608]
 
 
 
@@ -120,6 +112,113 @@ feel_neutral_emotions <- df[,1482]
 feel_frugal <- df[,1499]
 
 ##################
+# AGGIUNGO CATEGORIE AL DF INIZIALE #
+##################
+
+df_no_categories <- df[,-(1426:1620)]
+
+df <- cbind(df_no_categories, feel_frugal, feel_neutral_emotions,
+            feel_emotions, feel_like, feel_committed, feel_esteem,
+            feel_forgiveness, feel_impolite,
+            feel_horror, feel_hope, feel_hatred,
+            feel_fear,
+            feel_materialist,
+            feel_modern,
+            feel_motivation,
+            feel_neglect,
+            feel_offence,
+            feel_organized,
+            feel_pride,
+            feel_passionate,
+            feel_pleasure,
+            feel_power,
+            feel_poverty,
+            feel_pragmatic,
+            feel_resignation,
+            feel_regret,
+            feel_relaxed,
+            feel_remorse,
+            feel_wealth,
+            feel_sadness,
+            feel_safety,
+            feel_satisfaction,
+            feel_search,
+            feel_sedentary,
+            feel_thirst,
+            feel_shame,
+            feel_relief,
+            feel_suffering,
+            feel_surprise,
+            feel_spiritual,
+            feel_success,
+            feel_superstitious,
+            feel_symphaty,
+            feel_torment,
+            feel_traditionalist,
+            feel_violence,
+            feel_city_lover,
+            feel_affection,
+            feel_nature_lover,
+            feel_love,
+            feel_anguish,
+            feel_anxiety,
+            feel_belonging,
+            feel_active,
+            feel_calm,
+            feel_uncategorized,
+            feel_find,
+            feel_compassionate,
+            feel_behaviour,
+            feel_conformist,
+            feel_confusion,
+            feel_courage,
+            feel_curiosity,
+            feel_disappointment,
+            feel_dynamic,
+            feel_disgust,
+            feel_disillusion,
+            feel_disorganized,
+            feel_dissolute,
+            feel_amusement,
+            feel_eccentric,
+            feel_excitement,
+            feel_empathy,
+            feel_exasperation,
+            feel_hunger,
+            feel_happiness,
+            feel_frivolous,
+            feel_jealousy,
+            feel_joy,
+            feel_indipendence,
+            feel_intentions,
+            feel_envy,
+            feel_irritation,
+            feel_purchase,
+            feel_pain,
+            feel_polite,
+            feel_trust,
+            feel_playful,
+            feel_boredom,
+            feel_earnest,
+            feel_anger,
+            feel_health_fanatic,
+            feelings_curiosita,
+            feelings_felicita,
+            feelings_poverta,
+            feel_negativemotions,
+            feel_negativebehaviour,
+            feel_negative,
+            feel_nostalgia,
+            feel_outgoing,
+            feel_positive,
+            feel_reserved,
+            feel_selfrealization,
+            feel_sitelistblindnositlist,
+            feel_stress,
+            feel_thoughtful
+
+)
+
 
 
 
