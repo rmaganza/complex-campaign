@@ -1,6 +1,6 @@
 ####### FASCE ORARIE + GIORNI
 
-library(magrittr)
+#library(magrittr)
 
 # indexes_notte <- c(grep("00_00", colnames(df)), grep("00_30", colnames(df)), grep("01_", colnames(df)), grep("02_", colnames(df)), grep("03_", colnames(df)), grep("04_", colnames(df)), grep("05_", colnames(df)))
 #
