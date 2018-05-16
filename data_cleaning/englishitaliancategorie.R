@@ -1,4 +1,12 @@
+colnames(df)[1458] <- 'feel_curiosita' 
+colnames(df)[1493] <- 'feel_felicita'
+colnames(df)[1558] <- 'feel_poverta'
+
+
+
 feel_negative <- df[,1530]
+feel_negativemotions <- df[,1531]
+feel_negativebehaviour <- df[,1532]
 feel_nostalgia <- df[,1536]
 feel_outgoing <- df[,1544]
 feel_positive <- df[,1556]
@@ -202,9 +210,6 @@ df <- cbind(df_no_categories, feel_frugal, feel_neutral_emotions,
             feel_earnest,
             feel_anger,
             feel_health_fanatic,
-            feelings_curiosita,
-            feelings_felicita,
-            feelings_poverta,
             feel_negativemotions,
             feel_negativebehaviour,
             feel_negative,
