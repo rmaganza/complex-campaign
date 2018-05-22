@@ -33,3 +33,12 @@ sum((df[,360]=='NaN'))#4183 con valore nullo
 
 table(rowSums(df[,360:368])>100)#4541 sono maggiori di 100 
 
+
+#GRAFICI
+
+#Fasce orarie
+graf1 = barplot(round(table(rowSums(df[,24:359])>100)/82615, 2), main = 'Numero di osservazioni con somma fasce orarie > 100', ylim= c(0,1.099) ) 
+text(graf1, round(table(rowSums(df[,24:359])>100)/82615, 2), label = round(table(rowSums(df[,24:359])>100)/82615, 2), pos = 3, cex = 0.8, col= 4)
+
+
+
