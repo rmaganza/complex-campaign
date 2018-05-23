@@ -1,7 +1,7 @@
 # check incongruenze fasce orarie
 
 sum(rowSums(df[,24:359])>100) # 20876
-sum(rowSums(df[,24:359])==0)
+sum(rowSums(df[,24:359])==0) #0
 
 sum((df[,4])==0) #impressions =0 24
 
