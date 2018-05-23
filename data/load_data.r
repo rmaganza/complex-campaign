@@ -1,2 +1,2 @@
 rm(list=ls())
-load('data/campaign.Rdata')
+load('data/full.Rdata')
