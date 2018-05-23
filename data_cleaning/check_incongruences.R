@@ -31,3 +31,12 @@ sum(rowSums(df[,13:21])==0) #00
 sum((df[,358]=='Inf'))  #15850 con valore nullo
 sum((df[,358]=='NaN'))  #4181 con valore nullo
 
+
+#GRAFICI
+
+#Fasce orarie
+graf1 = barplot(round(table(rowSums(df[,24:359])>100)/82615, 2), main = 'Numero di osservazioni con somma fasce orarie > 100', ylim= c(0,1.099) ) 
+text(graf1, round(table(rowSums(df[,24:359])>100)/82615, 2), label = round(table(rowSums(df[,24:359])>100)/82615, 2), pos = 3, cex = 0.8, col= 4)
+
+
+
