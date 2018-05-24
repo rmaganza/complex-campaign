@@ -3,7 +3,11 @@
 sum(rowSums(df[,24:359])>100) # 20876
 sum(rowSums(df[,24:359])==0) #0
 
-sum((df[,4])==0) #impressions =0 24
+sums <- rowSums(df[,24:359])
+range(sums) # 50 - 17266.67
+
+# impressions
+sum((df[,4])==0) # 24
 
 
 # check categorie
