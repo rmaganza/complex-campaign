@@ -1,3 +1,4 @@
-rows_no_feelings <- which(rowSums(df[,1088:1175])==0)
-df_no_feelings <- df[rows_no_feelings, -(1088:1175)]
-df_feelings <- df[-rows_no_feelings,]
+feelings_col <- grep("feel",colnames(df_cleaned))
+rows_no_feelings <- which(rowSums(df_cleaned[,feelings_col])==0)
+df_no_feelings <- df_cleaned[rows_no_feelings, -feelings_col]
+df_feelings <- df_cleaned[-rows_no_feelings,]
