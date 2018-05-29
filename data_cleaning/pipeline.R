@@ -8,7 +8,7 @@ source('data_cleaning/scripts/dummify_device_type.R')
 source('data_cleaning/scripts/renormalize_incorrect_data.r')
 source('data_cleaning/scripts/remove_admants.r')
 
-df_cleaned <- df %>% remove_rows() %>% englishitaliancategorie() %>% dummify_device_type() %>% remove_null_columns() %>% aggregate_columns() %>% renormalize_fasce_orarie() %>% renormalize_categories() %>% remove_admants()
+df_cleaned <- df %>% remove_rows_no_impressions() %>% remove_rows_no_categories() %>% englishitaliancategorie() %>% dummify_device_type() %>% remove_null_columns() %>% aggregate_columns() %>% renormalize_fasce_orarie() %>% renormalize_categories() %>% remove_admants()
 
 source('data_cleaning/scripts/remove_feelings.R')
 
