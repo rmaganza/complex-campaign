@@ -6,6 +6,6 @@ df
 
 remove_rows_no_categories <- function(df) {
   categories_col <- grep("categories",colnames(df))
-  rows_no_categories <- which(rowSums(df[,categories_col])==0)
+  rows_no_categories <- which(rowSums(df[,categories_col], na.rm=T)==0)
   df[-rows_no_categories,]
 }

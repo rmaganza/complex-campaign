@@ -340,5 +340,8 @@ df$categories_work <- df$categories_work+df$categories_contracts+df$categories_r
 
 
 df<- df %>% select(-c(categories_airforce,categories_army,categories_navy,categories_drugtrafficking, categories_organizedcrime,categories_propertycrime,categories_bribery,categories_corruption,categories_fraud,categories_robbery,categories_theft,categories_assault,categories_homicide,categories_kidnapping, categories_torture,categories_sexualoffence,categories_paedophilia,categories_prostitution,categories_rape,categories_secretservice,categories_terrorism,categories_firedepartment,categories_police,categories_pornography,categories_sexeducation,categories_divorce,categories_family,categories_marriage,categories_healthcare,categories_hospital,categories_volunteering,categories_contracts,categories_retirement,categories_temporaryagencies,categories_unemployment,categories_unions))
-df
+
+df$categories_horses <- df$categories_horses + df$categories_horseracing
+
+df %<>% select(-categories_horseracing)
 }

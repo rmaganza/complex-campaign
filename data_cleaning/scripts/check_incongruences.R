@@ -28,8 +28,11 @@ sum(rowSums(df[,1426:1620])==0) #64810
 #lunghezza testo
 
 sum((df[,360]=='Inf'))  #15856 con valore nullo
-sum((df[,360]=='NaN'))  #4183 con valore nullo
+sum((df[,360]=='NaN')) #4183 con valore nullo
+sum(rowSums(df[,360:368], na.rm = T)==0)
 
+sum(sum(rowSums(df_cleaned[,16:24], na.rm = T)==0))
+sum(rowSums(df[,360:368], na.rm = T)>100)
 
 #GRAFICI
 

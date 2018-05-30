@@ -18,3 +18,10 @@ renormalize_feelings <- function(df) {
   df[feelings_incorrect, feelings_col] <- sweep(df[feelings_incorrect, feelings_col], 1, rowSums(df[feelings_incorrect, feelings_col]), "/", check.margin = F)*99.999999999
   df
 }
+
+renormalize_length <- function(df) {
+  col_length <- grep("L", colnames(df))
+  length_incorrect <- which(rowSums(df[,col_length])>100)
+  df[length_incorrect, col_length] <- sweep(df[length_incorrect, col_length], 1, rowSums(df[length_incorrect, col_length]), "/", check.margin = F)*99.999999999
+  df
+}

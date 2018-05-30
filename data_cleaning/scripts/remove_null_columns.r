@@ -4,3 +4,7 @@ null_columns <- which(colSums(df)==0)
 df <- df[, -null_columns]
 df
 }
+
+remove_cat_uncategorized <- function(df) {
+  df %>% select(-one_of("categories_uncategorized"))
+}
