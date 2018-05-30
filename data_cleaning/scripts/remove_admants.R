@@ -1,3 +1,4 @@
 remove_admants <- function(df) {
-  df %>% select(-(493:572))
+  categories_admants <- grep('admants', colnames(df))
+  df %>% select(-categories_admants)
 }
