@@ -30,14 +30,14 @@ aggregate_ore <- function(df) {
   feriale_pomeriggio <- rowSums(df[,indexes_pomeriggio_feriali])
   df <- cbind(df, feriale_pomeriggio)
 
-  indexes_pomeriggio_festivo <- indexes_mattina[indexes_mattina > 260]
-  festivo_pomeriggio <- rowSums(df[,indexes_mattina_festivo])
+  indexes_pomeriggio_festivo <- indexes_pomeriggio[indexes_pomeriggio > 260]
+  festivo_pomeriggio <- rowSums(df[,indexes_pomeriggio_festivo])
   df <- cbind(df, festivo_pomeriggio)
 
   indexes_sera <- c(grep("18_", colnames(df)), grep("19_", colnames(df)), grep("20_", colnames(df)), grep("21_", colnames(df)), grep("22_", colnames(df)), grep("23_", colnames(df)))
 
-  indexes_sera_feriali <- indexes_pomeriggio[indexes_pomeriggio <= 260]
-  feriale_sera <- rowSums(df[,indexes_pomeriggio_feriali])
+  indexes_sera_feriali <- indexes_sera[indexes_sera <= 260]
+  feriale_sera <- rowSums(df[,indexes_sera_feriali])
   df <- cbind(df, feriale_sera)
 
   indexes_sera_festivo <- indexes_sera[indexes_sera > 260]

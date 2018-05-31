@@ -1,3 +1,4 @@
+library(MASS)
 library(dplyr)
 source("data/load_data.r")
 source('data_cleaning/scripts/remove_rows.R')
@@ -13,7 +14,7 @@ source('data_cleaning/scripts/aggregate_os.r')
 source('data_cleaning/scripts/aggregate_browsers.r')
 source('data_cleaning/scripts/ko_texts.r')
 
-df_cleaned <- df %>% remove_rows_no_impressions() %>% remove_rows_no_categories() %>% englishitaliancategorie() %>% dummify_device_type() %>% remove_null_columns() %>% aggregate_columns() %>% renormalize_fasce_orarie() %>% aggregate_ore() %>% renormalize_categories() %>% remove_admants() %>% binary_clicks() %>% aggregate_os() %>% aggregate_browsers() %>% remove_cat_uncategorized() %>% ko_texts() %>% renormalize_length()
+df_cleaned <- df %>% remove_rows_no_impressions() %>% remove_rows_no_categories() %>% englishitaliancategorie() %>% dummify_device_type() %>% remove_null_columns() %>% aggregate_columns() %>% renormalize_fasce_orarie() %>% aggregate_ore() %>% renormalize_categories() %>% remove_admants() %>% binary_clicks() %>% aggregate_os() %>% aggregate_browsers() %>% remove_cat_uncategorized() %>% ko_texts() %>% renormalize_length() %>% remove_rows_missing_categories()
 
 df_cleaned <- df_cleaned[df_cleaned$suspicious==0,]
 df_cleaned <- df_cleaned %>% select(-one_of("suspicious", "ad_form_id"))

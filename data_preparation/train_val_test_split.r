@@ -1,5 +1,3 @@
-source('data_preparation/resample.R')
-
 tvt_split <- function(dataset, probs=c(0.65,0.2, 0.15)) {
   g <- sample(cut(
     seq(nrow(dataset)),
