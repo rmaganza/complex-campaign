@@ -18,6 +18,7 @@ df_cleaned <- df %>% remove_rows_no_impressions() %>% remove_rows_no_categories(
 
 df_cleaned <- df_cleaned[df_cleaned$suspicious==0,]
 df_cleaned <- df_cleaned %>% select(-one_of("suspicious", "ad_form_id"))
+df_cleaned <- df_cleaned[which(rowSums(is.na(df_cleaned))==0),]
 
 source('data_cleaning/scripts/remove_feelings.R')
 

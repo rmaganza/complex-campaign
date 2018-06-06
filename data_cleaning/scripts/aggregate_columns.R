@@ -6,20 +6,20 @@ df <- df %>% select(-c(categories_search, categories_find, categories_purchase))
 
 
 df$categories_religionandspirituality <- df$categories_atheismagnosticism + df$categories_buddhism + df$categories_christianity + df$categories_protestantism + df$categories_hinduism + df$categories_islam + df$categories_islamicfundamentalism
-df <- df%>% select(-c(categories_protestantism, categories_hinduism, categories_islam, categories_islamicfundamentalism))
+df <- df%>% select(-c(categories_protestantism, categories_buddhism, categories_christianity, categories_hinduism, categories_islam, categories_islamicfundamentalism))
 
 
-df$categories_shopping <- df$categories_shopping + df$categories_contestsandfreebies + df$categories_couponing + df$categories_comparisonsengines + df$categories_retail + df$categories_supermarkets + df$categories_secondhandmarket
-df <- df %>% select(-c(categories_comparisonsengines, categories_retail, categories_supermarkets, categories_secondhandmarket))
+df$categories_shopping <- df$categories_shopping + df$categories_contestsandfreebies + df$categories_couponing + df$categories_comparisonsengines + df$categories_retail + df$categories_supermarkets + df$categories_secondhandmarket + df$categories_couponing +df$categories_contestsandfreebies
+df <- df %>% select(-c(categories_comparisonsengines, categories_retail, categories_supermarkets, categories_secondhandmarket, categories_couponing, categories_contestsandfreebies))
 
 
 df$categories_realestate <- df$categories_realestate + df$categories_apartments + df$categories_architects + df$categories_buyingsellinghomes
 df <- df %>% select(-c(categories_realestate, categories_apartments, categories_architects, categories_buyingsellinghomes))
 
 
-df$categories_travel <- df$categories_travel + df$categories_touristdestinations + df$categories_africa + df$categories_africa + df$categories_byuslocale + df$categories_canada + df$categories_europe + df$categories_france + df$categories_italy + df$categories_japan + df$categories_mexicoandcentralamerica + df$categories_southamerica + df$categories_unitedkingdom + df$categories_nationalparks + df$categories_themeparks + df$categories_cities + df$categories_spas + df$categories_seasideresorts + df$categories_skiresorts + df$categories_budgettravel + df$categories_lastminute + df$categories_holidays + df$categories_touristicfacilities + df$categories_bedandbreakfast + df$categories_camping + df$categories_hotel + df$categories_transports + df$categories_airtravel + df$categories_airplanes + df$categories_airfare + df$categories_airports + df$categories_airandspaceaccident + df$categories_railwayaccident + df$categories_railwaytravel + df$categories_roadtravel + df$categories_roadaccident + df$categories_seatravel + df$categories_cruises + df$categories_maritimeaccident + df$categories_publictransport
+df$categories_travel <- df$categories_travel + df$categories_australiaandnewzealand + df$categories_touristdestinations + df$categories_africa + df$categories_byuslocale + df$categories_canada + df$categories_europe + df$categories_france + df$categories_italy + df$categories_japan + df$categories_mexicoandcentralamerica + df$categories_southamerica + df$categories_unitedkingdom + df$categories_nationalparks + df$categories_themeparks + df$categories_cities + df$categories_spas + df$categories_seasideresorts + df$categories_skiresorts + df$categories_budgettravel + df$categories_lastminute + df$categories_holidays + df$categories_touristicfacilities + df$categories_bedandbreakfast + df$categories_camping + df$categories_hotel + df$categories_transports + df$categories_airtravel + df$categories_airplanes + df$categories_airfare + df$categories_airports + df$categories_airandspaceaccident + df$categories_railwayaccident + df$categories_railwaytravel + df$categories_roadtravel + df$categories_roadaccident + df$categories_seatravel + df$categories_cruises + df$categories_maritimeaccident + df$categories_publictransport +df$categories_airlines
 
-df <- df %>% select(-c(categories_travel, categories_touristdestinations, categories_africa, categories_africa, categories_byuslocale, categories_canada, categories_europe, categories_france, categories_italy, categories_japan, categories_mexicoandcentralamerica, categories_southamerica, categories_unitedkingdom, categories_nationalparks, categories_themeparks, categories_cities, categories_spas, categories_seasideresorts, categories_skiresorts, categories_budgettravel, categories_lastminute, categories_holidays, categories_touristicfacilities, categories_bedandbreakfast, categories_camping, categories_hotel, categories_transports, categories_airtravel, categories_airplanes, categories_airfare, categories_airports, categories_airandspaceaccident, categories_railwayaccident, categories_railwaytravel, categories_roadtravel, categories_roadaccident, categories_seatravel, categories_cruises, categories_maritimeaccident, categories_publictransport))
+df <- df %>% select(-c(categories_travel, categories_touristdestinations, categories_africa, categories_australiaandnewzealand, categories_byuslocale, categories_canada, categories_europe, categories_france, categories_italy, categories_japan, categories_mexicoandcentralamerica, categories_southamerica, categories_unitedkingdom, categories_nationalparks, categories_themeparks, categories_cities, categories_spas, categories_seasideresorts, categories_skiresorts, categories_budgettravel, categories_lastminute, categories_holidays, categories_touristicfacilities, categories_bedandbreakfast, categories_camping, categories_hotel, categories_transports, categories_airtravel, categories_airplanes, categories_airfare, categories_airports, categories_airandspaceaccident, categories_railwayaccident, categories_railwaytravel, categories_roadtravel, categories_roadaccident, categories_seatravel, categories_cruises, categories_maritimeaccident, categories_publictransport, categories_airlines))
 
 
 df$categories_technologyandcomputing <- df$categories_technologyandcomputing + df$categories_hardware + df$categories_computerperipherals + df$categories_monitor + df$categories_printers + df$categories_gameconsole + df$categories_disks + df$categories_graphicscards + df$categories_soundboard + df$categories_memory + df$categories_portablememory + df$categories_processors + df$categories_motherboards + df$categories_computernetworking + df$categories_router + df$categories_wirelesstechnology + df$categories_networksecurity + df$categories_computer + df$categories_desktopcomputer + df$categories_portablecomputer + df$categories_laptop + df$categories_palmtopspdas + df$categories_tabletpc + df$categories_internettechnology + df$categories_chat + df$categories_ecommerce + df$categories_email + df$categories_websearch + df$categories_forum + df$categories_socialnetwork + df$categories_computercrime + df$categories_hacking + df$categories_operatingsystems + df$categories_macos + df$categories_windows + df$categories_programminglanguages + df$categories_cc + df$categories_java + df$categories_javascript + df$categories_software + df$categories_antivirussoftware + df$categories_graphicssoftware + df$categories_3dgraphics + df$categories_sharewarefreeware + df$categories_desktopvideo + df$categories_databases + df$categories_technologicalinnovation + df$categories_consumerelectronics + df$categories_mp3reader + df$categories_ebookreader + df$categories_gpsnavigator + df$categories_homevideodvd + df$categories_radioset + df$categories_tvset + df$categories_camerasandcamcorders + df$categories_cameras + df$categories_camcorders + df$categories_photoandvideoaccessories + df$categories_telephony + df$categories_cellphones + df$categories_cellphoneaccessories + df$categories_connection + df$categories_fixedphone + df$categories_smartphone + df$categories_telephonerates + df$categories_electroniccomponents + df$categories_computerreviews + df$categories_macsupport + df$categories_mp3midi + df$categories_pcsupport
@@ -48,7 +48,6 @@ df$categories_businessindustry <- df$categories_agriculture + df$categories_orga
   df$categories_electronicindustry +
   df$categories_energy + df$categories_electricity + df$categories_electricityrates + df$categories_nuclearaccident + df$categories_naturalgas + df$categories_oil + df$categories_oilcompany + df$categories_petrol + df$categories_solarenergy +
   df$categories_foodindustry +
-  df$categories_footwear +
   df$categories_forestry +
   df$categories_industrialdesign +
   df$categories_industryfinancing +
@@ -86,12 +85,6 @@ df$categories_familyandparenting <- df$categories_adoption +
   df$categories_babiesandtoddlers +
   df$categories_children + df$categories_childrensfood + df$categories_childrensrights + df$categories_objectsforchildren + df$categories_daycarepreschool
 
-df$categories_physics <- df$categories_physics + df$categories_spaceastronomy + df$categories_atomicphysics + df$categories_electromagnetism + df$categories_optics
-
-df$categories_socialscience <- df$categories_socialscience + df$categories_anthropology + df$categories_history + df$categories_ancienthistory + df$categories_archaeology + df$categories_contemporaryhistory + df$categories_heraldry + df$categories_genealogy + df$categories_medievalhistory + df$categories_modernhistory + df$categories_prehistory + df$categories_linguistics + df$categories_translation + df$categories_pedagogy + df$categories_philosophy + df$categories_ethics + df$categories_sociology
-
-df$categories_weather <- df$categories_weather + df$categories_meteorologicaldisaster + df$categories_flood + df$categories_hurricane
-
 df$categories_finance <- df$categories_finance + df$categories_personalfinance + df$categories_investing + df$categories_stocks + df$categories_mutualfunds + df$categories_insurance + df$categories_carinsurance + df$categories_creditdebtandloans + df$categories_financialplanning + df$categories_retirementplanning + df$categories_saving +
   df$categories_bank + df$categories_bankaccount + df$categories_checks + df$categories_foreignbank + df$categories_portfolio + df$categories_securities + df$categories_bankservices + df$categories_prices + df$categories_taxplanning
 
@@ -114,7 +107,6 @@ df <- df %>% select( -c(categories_booksandliterature , categories_bestsellers ,
                         categories_electronicindustry ,
                         categories_energy , categories_electricity , categories_electricityrates , categories_nuclearaccident , categories_naturalgas , categories_oil , categories_oilcompany , categories_petrol , categories_solarenergy ,
                         categories_foodindustry ,
-                        categories_footwear ,
                         categories_forestry ,
                         categories_industrialdesign ,
                         categories_industryfinancing ,
@@ -146,110 +138,55 @@ df <- df %>% select( -c(categories_booksandliterature , categories_bestsellers ,
                         categories_motherhood , categories_artificialinsemination , categories_pregnancy ,
                         categories_babiesandtoddlers ,
                         categories_children , categories_childrensfood , categories_childrensrights , categories_objectsforchildren , categories_daycarepreschool,
-                        categories_spaceastronomy , categories_atomicphysics , categories_electromagnetism , categories_optics ,
-                        categories_anthropology , categories_history , categories_ancienthistory , categories_archaeology , categories_contemporaryhistory , categories_heraldry , categories_genealogy , categories_medievalhistory , categories_modernhistory , categories_prehistory , categories_linguistics , categories_translation , categories_pedagogy , categories_philosophy , categories_ethics , categories_sociology ,
-                        categories_meteorologicaldisaster , categories_flood , categories_hurricane ,
                         categories_personalfinance , categories_investing , categories_stocks , categories_mutualfunds , categories_insurance , categories_carinsurance , categories_creditdebtandloans , categories_financialplanning , categories_retirementplanning , categories_saving ,
                         categories_bank , categories_bankaccount , categories_checks , categories_foreignbank , categories_portfolio , categories_securities , categories_bankservices , categories_prices , categories_taxplanning
 ))
 
 
-df$categories_pets <- df$categories_pets + df$categories_birds + df$categories_dogs+ df$categories_animalwelfare+ df$categories_zoo
-df <- df %>% select (-c(categories_birds,categories_dogs,categories_animalwelfare, categories_zoo))
+df$categories_pets <- df$categories_pets + df$categories_birds + df$categories_dogs+ df$categories_animalwelfare+ df$categories_zoo + df$categories_cats
+df <- df %>% select (-c(categories_birds,categories_dogs,categories_animalwelfare, categories_zoo, categories_cats))
 
 
-#SPORTS  (SECONDO LIVELLO DI AGGREGAZIONE)
-#NB: sports che è il primo strato di aggregazione contiene tutti gli articoli visti la cui categoria non è contemplata tra quelle proposte
+#SPORTS
 
-#Autoracing (per ora le lasciamo separate, si tratta di un'azienda di automotive)
-#df$categories_autoracing <- df$categories_autoracing+ df$categories_formula1 + df$categories_rally + df$categories_nascar
-#df <- df %>% select (-c(categories_formula1,categories_rally,categories_nascar))
+df$categories_sports <- df$categories_sports + df$categories_bicycling + df$categories_mountainbiking + df$categories_mountainclimbing + df$categories_fishing + df$categories_sportfishing + df$categories_hockey + df$categories_icehockey + df$categories_huntingshooting + df$categories_targetshooting + df$categories_martialarts+ df$categories_karate + df$categories_sumo + df$categories_autoracing + df$categories_formula1 + df$categories_rally + df$categories_nascar + df$categories_archery + df$categories_badminton + df$categories_baseball + df$categories_basketball + df$categories_bodybuilding + df$categories_boxing + df$categories_canoeingkayaking + df$categories_cricket + df$categories_fencing + df$categories_football + df$categories_golf + df$categories_handball + df$categories_horseracing + df$categories_horses + df$categories_motorcycling + df$categories_motogp + df$categories_olympics + df$categories_rugby + df$categories_runningjogging + df$categories_scubadiving + df$categories_skateboarding + df$categories_skating + df$categories_skiing + df$categories_downhillskiing + df$categories_snowboarding + df$categories_soccer + df$categories_surfingbodyboarding + df$categories_squash + df$categories_swimming + df$categories_tabletennispingpong + df$categories_tennis + df$categories_trekking + df$categories_beachvolleyball + df$categories_wrestling +df$categories_billiards
 
-#Bicycling
-df$categories_bicycling <- df$categories_bicycling + df$categories_mountainbiking
-df <- df %>% select (-categories_mountainbiking)
-
-#Climbing
-df$categories_climbing <- df$categories_mountainclimbing
+df <- df%>% select(-c(categories_autoracing, categories_horseracing, categories_horses, categories_formula1, categories_rally, categories_nascar, categories_archery, categories_badminton, categories_baseball, categories_basketball, categories_bodybuilding, categories_boxing, categories_canoeingkayaking, categories_cricket, categories_fencing, categories_football, categories_golf, categories_handball, categories_motorcycling, categories_motogp, categories_olympics, categories_rugby, categories_runningjogging, categories_scubadiving, categories_skateboarding, categories_skating, categories_snowboarding, categories_soccer, categories_surfingbodyboarding, categories_squash, categories_swimming, categories_tabletennispingpong, categories_tennis, categories_trekking, categories_beachvolleyball, categories_wrestling, categories_billiards))
+df <- df %>% select (-c(categories_bicycling, categories_mountainbiking))
 df <- df %>% select (-categories_mountainclimbing)
-
-#Fishing
-df$categories_fishing <- df$categories_fishing + df$categories_sportfishing
-df <- df %>% select (-categories_sportfishing)
-
-#Hockey
-df$categories_hockey <- df$categories_hockey + df$categories_icehockey
-df <- df %>% select (-categories_icehockey)
-
-#Hunting/shooting
-df$categories_huntingshooting <- df$categories_huntingshooting + df$categories_targetshooting
-df <- df %>% select (-categories_targetshooting)
-
-
-#Martial arts
-df$categories_martialarts <- df$categories_martialarts+ df$categories_karate + df$categories_sumo
-df <- df %>% select (-c(categories_karate, categories_sumo))
-
-#Moto gp andrebbe aggregato a motorcycling, per ora però lo lascio così
-
-#Paralympic anche lo lascio così
-
-#Skiing
-df$categories_skiing <-df$categories_skiing + df$categories_downhillskiing
-df <- df %>% select (-categories_downhillskiing)
-
-#Swimming OK
-
-#Volley ball and beach volley li lascio così
+df <- df %>% select (-c(categories_fishing, categories_sportfishing))
+df <- df %>% select (-c(categories_hockey, categories_icehockey))
+df <- df %>% select (-c(categories_huntingshooting, categories_targetshooting))
+df <- df %>% select (-c(categories_martialarts, categories_karate, categories_sumo))
+df <- df %>% select (-c(categories_skiing, categories_downhillskiing))
 
 
 #STYLE AND FASHION
 
-#Cosmetic
+df$categories_styleandfashion <- df$categories_accessories + df$categories_gym + df$categories_cosmetics + df$categories_cosmeticsformen + df$categories_haircare + df$categories_tattoos + df$categories_clothing + df$categories_fashion + df$categories_jewelry + df$categories_swimwear +df$categories_fashionshow +df$categories_footwear +df$categories_mensfashion + df$categories_style + df$categories_underwear + df$categories_luxurygoods
 
-#Underwear OK
-
-#Beauty
-df$categories_beauty <- df$categories_gym+ df$categories_cosmetics + df$categories_cosmeticsformen + df$categories_haircare + df$categories_tattoos
-df <- df %>% select (-c(categories_gym,categories_cosmetics, categories_cosmeticsformen, categories_haircare, categories_tattoos))
+df <- df %>% select (-c(categories_accessories, categories_gym,categories_cosmetics, categories_cosmeticsformen, categories_haircare, categories_tattoos, categories_clothing, categories_fashion, categories_jewelry, categories_swimwear, categories_fashionshow, categories_footwear, categories_mensfashion, categories_style, categories_underwear, categories_luxurygoods))
 
 
 
 #SCIENCE
 
-#Zoology
-df$categories_zoology <- df$categories_zoology+df$categories_breeding+ df$categories_endangeredspecies + df$categories_ichthyology+ df$categories_ornithology
-df <- df %>% select (-c(categories_breeding,categories_endangeredspecies, categories_ichthyology ,categories_ornithology))
+df$categories_science <- df$categories_zoology+df$categories_breeding+ df$categories_endangeredspecies + df$categories_ichthyology+ df$categories_ornithology + df$categories_biology + df$categories_botany + df$categories_marinebiology + df$categories_zoology + df$categories_chemistry + df$categories_inorganicchemistry + df$categories_organicchemistry + df$categories_ecology+df$categories_pollution + df$categories_wastedisposal+ df$categories_recycling + df$categories_engineering + df$categories_geography+ df$categories_cartography+df$categories_hydrography+ df$categories_topography + df$categories_geology+ df$categories_mineralogy + df$categories_earthquakes + df$categories_volcanology + df$categories_volcaniceruptions +  df$categories_mathematics+ df$categories_algebra+df$categories_arithmetic+ df$categories_geometry + df$categories_statistics + df$categories_medicine +df$categories_dermatology +df$categories_embryology +df$categories_genetics +df$categories_immunology+df$categories_oncology+df$categories_pediatrics+df$categories_pharmacology+df$categories_physiology+df$categories_psychologypsychiatry+df$categories_surgery+df$categories_cosmeticsurgery+df$categories_transplants+df$categories_veterinarymedicine + df$categories_physics + df$categories_spaceastronomy + df$categories_atomicphysics + df$categories_electromagnetism + df$categories_optics + df$categories_socialscience + df$categories_anthropology + df$categories_history + df$categories_ancienthistory + df$categories_archaeology + df$categories_contemporaryhistory + df$categories_heraldry + df$categories_genealogy + df$categories_medievalhistory + df$categories_modernhistory + df$categories_prehistory + df$categories_linguistics + df$categories_translation + df$categories_pedagogy + df$categories_philosophy + df$categories_ethics + df$categories_sociology + df$categories_weather + df$categories_meteorologicaldisaster + df$categories_flood + df$categories_hurricane +df$categories_entomology
 
-#Biology
-df$categories_biology <- df$categories_biology + df$categories_botany + df$categories_marinebiology + df$categories_zoology
-df <- df %>% select (-c(categories_botany, categories_marinebiology, categories_zoology ))
+df <- df %>% select (-c(categories_zoology, categories_breeding,categories_endangeredspecies, categories_ichthyology ,categories_ornithology, categories_entomology))
+df <- df %>% select (-c(categories_botany, categories_marinebiology, categories_biology))
+df <- df %>% select(-c(categories_chemistry, categories_organicchemistry, categories_inorganicchemistry))
+df <- df %>% select (-c(categories_ecology, categories_pollution, categories_wastedisposal, categories_recycling))
+df <- df %>% select (-c(categories_geography,categories_cartography,categories_hydrography, categories_topography))
+df <- df %>% select(-categories_engineering)
+df <- df %>% select (-c(categories_geology, categories_mineralogy, categories_earthquakes, categories_volcanology, categories_volcaniceruptions))
+df <- df %>% select (-c(categories_mathematics, categories_algebra,categories_arithmetic, categories_geometry, categories_statistics))
+df <- df %>% select (-c(categories_medicine, categories_dermatology , categories_embryology ,categories_genetics  , categories_immunology, categories_oncology , categories_pediatrics , categories_pharmacology , categories_physiology , categories_psychologypsychiatry, categories_surgery , categories_cosmeticsurgery , categories_transplants, categories_veterinarymedicine))
+df %<>% select(-c(categories_physics, categories_spaceastronomy , categories_atomicphysics , categories_electromagnetism, categories_optics))
 
-#Chemistry
-df$categories_chemistry <- df$categories_chemistry+df$categories_inorganicchemistry+ df$categories_organicchemistry
-df <- df %>% select (-c(categories_inorganicchemistry,categories_organicchemistry))
+df %<>% select(-c(categories_socialscience, categories_anthropology , categories_history , categories_ancienthistory , categories_archaeology , categories_contemporaryhistory , categories_heraldry , categories_genealogy , categories_medievalhistory , categories_modernhistory , categories_prehistory , categories_linguistics , categories_translation , categories_pedagogy , categories_philosophy , categories_ethics , categories_sociology))
 
-#Ecology
-df$categories_ecology <- df$categories_ecology+df$categories_pollution + df$categories_wastedisposal+ df$categories_recycling
-df <- df %>% select (-c(categories_pollution, categories_wastedisposal, categories_recycling))
-
-#Geography
-df$categories_geography <- df$categories_geography+ df$categories_cartography+df$categories_hydrography+ df$categories_topography
-df <- df %>% select (-c(categories_cartography,categories_hydrography, categories_topography))
-
-#Geology
-df$categories_geology <- df$categories_geology+ df$categories_mineralogy + df$categories_earthquakes + df$categories_volcanology + df$categories_volcaniceruptions
-df <- df %>% select (-c(categories_mineralogy, categories_earthquakes, categories_volcanology, categories_volcaniceruptions))
-
-#Mathematics
-df$categories_mathematics <- df$categories_mathematics+ df$categories_algebra+df$categories_arithmetic+ df$categories_geometry + df$categories_statistics
-df <- df %>% select (-c(categories_algebra,categories_arithmetic, categories_geometry, categories_statistics))
-
-#Medicine
-df$categories_medicine <- df$categories_medicine +df$categories_dermatology +df$categories_embryology +df$categories_genetics +df$categories_immunology+df$categories_oncology+df$categories_pediatrics+df$categories_pharmacology+df$categories_physiology+df$categories_psychologypsychiatry+df$categories_surgery+df$categories_cosmeticsurgery+df$categories_transplants+df$categories_veterinarymedicine
-
-df <- df %>% select (-c( categories_dermatology , categories_embryology ,categories_genetics  , categories_immunology, categories_oncology , categories_pediatrics , categories_pharmacology , categories_physiology , categories_psychologypsychiatry, categories_surgery , categories_cosmeticsurgery , categories_transplants, categories_veterinarymedicine))
-
+df %<>% select(-c(categories_weather, categories_meteorologicaldisaster , categories_flood , categories_hurricane))
 #############################
 #categories_healthandfitness#
 #############################
@@ -292,10 +229,10 @@ df<-df %>% select(-c(categories_dessertsandbaking,categories_foodallergies,categ
 #categories_hobbiesandinterests#
 ################################
 df$categories_hobbiesandinterests <- df$categories_hobbiesandinterests+df$categories_arttechnology+ df$categories_artsandcrafts+df$categories_jewelrymaking+df$categories_woodworking+df$categories_photography+df$categories_drawingsketchingpainting+df$categories_crochet+df$categories_knitting+df$categories_diy+df$categories_pottery+df$categories_watchmaking+df$categories_birdwatching+
-  df$categories_collecting+df$categories_stampsandcoins+df$categories_reading+df$categories_scifiandfantasy+df$categories_gettingpublished+df$categories_screenwriting+df$categories_freelancewriting+df$categories_guitar+df$categories_inventorsandpatents+df$categories_games+df$categories_cardgames+df$categories_chess+df$categories_roleplayinggames+df$categories_videoandcomputergames+ df$categories_boardgamespuzzles+df$categories_lottery+df$categories_magicandillusion+df$categories_needlework+df$categories_scrapbooking+df$categories_astrology+df$categories_paranormalphenomena+df$categories_occult+df$categories_ufo
+  df$categories_collecting+df$categories_stampsandcoins+df$categories_reading+df$categories_scifiandfantasy+df$categories_gettingpublished+df$categories_screenwriting+df$categories_freelancewriting+df$categories_guitar+df$categories_inventorsandpatents+df$categories_games+df$categories_cardgames+df$categories_chess+df$categories_roleplayinggames+df$categories_videoandcomputergames+ df$categories_boardgamespuzzles+df$categories_lottery+df$categories_magicandillusion+df$categories_needlework+df$categories_scrapbooking+df$categories_astrology+df$categories_paranormalphenomena+df$categories_occult+df$categories_ufo + df$categories_gambling
 
 
-df <- df %>% select(-c(categories_arttechnology,categories_artsandcrafts,categories_jewelrymaking,categories_woodworking,categories_photography,categories_drawingsketchingpainting,categories_crochet,categories_knitting,categories_diy,categories_pottery,categories_watchmaking,categories_birdwatching,categories_collecting,categories_stampsandcoins,categories_reading,categories_scifiandfantasy,categories_gettingpublished,categories_screenwriting,categories_freelancewriting,categories_guitar,categories_inventorsandpatents,categories_games,categories_cardgames,categories_chess,categories_roleplayinggames,admants_videoandcomputergames,categories_boardgamespuzzles,categories_lottery,categories_magicandillusion,categories_needlework,categories_scrapbooking,categories_astrology,categories_paranormalphenomena,categories_occult,categories_ufo))
+df <- df %>% select(-c(categories_arttechnology,categories_artsandcrafts,categories_jewelrymaking,categories_woodworking,categories_photography,categories_drawingsketchingpainting,categories_crochet,categories_knitting,categories_diy,categories_pottery,categories_watchmaking,categories_birdwatching,categories_collecting,categories_stampsandcoins,categories_reading,categories_scifiandfantasy,categories_gettingpublished,categories_screenwriting,categories_freelancewriting,categories_guitar,categories_inventorsandpatents,categories_games,categories_cardgames,categories_chess,categories_roleplayinggames,admants_videoandcomputergames,categories_boardgamespuzzles,categories_lottery,categories_magicandillusion,categories_needlework,categories_scrapbooking,categories_astrology,categories_paranormalphenomena,categories_occult,categories_ufo, categories_gambling))
 
 
 ##########################
@@ -323,25 +260,18 @@ df<-df %>% select(-c(categories_immigration,categories_legalissues,categories_ci
 # categories_society#
 #####################
 
+df$categories_society <- df$categories_society + df$categories_dating + df$categories_gaylife + df$categories_seniorliving + df$categories_teens +df$categories_ethnicspecific + df$categories_armedforces + df$categories_airforce+df$categories_army+ df$categories_navy + df$categories_crime +df$categories_drugtrafficking+ df$categories_organizedcrime+df$categories_propertycrime+df$categories_bribery+df$categories_corruption+df$categories_fraud+df$categories_robbery+df$categories_theft+df$categories_assault+df$categories_homicide+df$categories_kidnapping+ df$categories_torture+df$categories_sexualoffence+df$categories_paedophilia+df$categories_prostitution+df$categories_rape + df$categories_espionageandintelligence + df$categories_secretservice+df$categories_terrorism + df$categories_lawenforcement+df$categories_firedepartment+df$categories_police +df$categories_racism + df$categories_sex+df$categories_pornography+df$categories_sexeducation + df$categories_divorce+df$categories_family+df$categories_marriage + df$categories_unrestandwar + df$categories_healthcare+df$categories_hospital+df$categories_volunteering +df$categories_work+df$categories_contracts+df$categories_retirement+df$categories_temporaryagencies+df$categories_unemployment+df$categories_unions
 
-df$categories_armedforces<- df$categories_armedforces + df$categories_airforce+df$categories_army+ df$categories_navy
-df$categories_crime<- df$categories_crime +df$categories_drugtrafficking+ df$categories_organizedcrime+df$categories_propertycrime+df$categories_bribery+df$categories_corruption+df$categories_fraud+df$categories_robbery+df$categories_theft+df$categories_assault+df$categories_homicide+df$categories_kidnapping+ df$categories_torture+df$categories_sexualoffence+df$categories_paedophilia+df$categories_prostitution+df$categories_rape
 
-df$categories_espionageandintelligence <-df$categories_espionageandintelligence + df$categories_secretservice+df$categories_terrorism
 
-df$categories_lawenforcement <- df$categories_lawenforcement+df$categories_firedepartment+df$categories_police
-
-df$categories_sex <- df$categories_sex+df$categories_pornography+df$categories_sexeducation
-df$categories_socialinstitutions <- df$categories_divorce+df$categories_family+df$categories_marriage
-
-df$categories_welfare <- df$categories_healthcare+df$categories_hospital+df$categories_volunteering
-
-df$categories_work <- df$categories_work+df$categories_contracts+df$categories_retirement+df$categories_temporaryagencies+df$categories_unemployment+df$categories_unions
+df %<>% select(-c(categories_dating, categories_gaylife, categories_seniorliving, categories_teens, categories_ethnicspecific, categories_armedforces, categories_crime, categories_espionageandintelligence, categories_lawenforcement, categories_racism, categories_sex, categories_unrestandwar, categories_work))
 
 
 df<- df %>% select(-c(categories_airforce,categories_army,categories_navy,categories_drugtrafficking, categories_organizedcrime,categories_propertycrime,categories_bribery,categories_corruption,categories_fraud,categories_robbery,categories_theft,categories_assault,categories_homicide,categories_kidnapping, categories_torture,categories_sexualoffence,categories_paedophilia,categories_prostitution,categories_rape,categories_secretservice,categories_terrorism,categories_firedepartment,categories_police,categories_pornography,categories_sexeducation,categories_divorce,categories_family,categories_marriage,categories_healthcare,categories_hospital,categories_volunteering,categories_contracts,categories_retirement,categories_temporaryagencies,categories_unemployment,categories_unions))
 
-df$categories_horses <- df$categories_horses + df$categories_horseracing
+df$categories_automotive <- df$categories_automotive + df$categories_autoparts + df$categories_buyingsellingcars + df$categories_carculture + df$categories_buyasecondhandcar + df$categories_cars + df$categories_coupe + df$categories_crossover + df$categories_electricvehicle + df$categories_hatchback + df$categories_luxury + df$categories_minivan + df$categories_performancevehicles + df$categories_vintagecars + df$categories_wagon + df$categories_suv + df$categories_rv + df$categories_carindustry + df$categories_motorcycles +df$categories_motorshows + df$categories_trucksandaccessories
 
-df %<>% select(-categories_horseracing)
+df %<>% select(-c(categories_autoparts, categories_buyingsellingcars, categories_carculture, categories_buyasecondhandcar, categories_cars, categories_coupe, categories_crossover, categories_electricvehicle, categories_hatchback, categories_luxury, categories_minivan, categories_performancevehicles, categories_vintagecars, categories_wagon, categories_suv, categories_rv, categories_carindustry, categories_motorcycles, categories_motorshows, categories_trucksandaccessories))
+
+
 }

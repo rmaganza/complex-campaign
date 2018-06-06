@@ -15,3 +15,5 @@ df_no_response <- train_no_feelings %>% select(-c(clicked, clicks, impressions))
 df_no_feelings_oversampled_train <- oversample(df_no_response, train_no_feelings$clicked)
 df_no_feelings_undersampled_train <- undersample(df_no_response, train_no_feelings$clicked)
 
+# save(df_no_feelings_oversampled_train, file='data/split/resampled/df_no_feelings_oversampled_train')
+# save(df_no_feelings_undersampled_train, file='data/split/resampled/df_no_feelings_undersampled_train')
