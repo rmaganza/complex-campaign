@@ -2,13 +2,13 @@
 
 Final project for the Complex Data Analysis course by:
 
-*Riccardo Maganza
+*Riccardo Maganza*
 
-Alberto Monaco
+*Alberto Monaco*
 
-Matteo Petrovich
+*Matteo Petrovich*
 
-Massimiliano Rubino*
+*Massimiliano Rubino*
 
 **Statistical and Economic Sciences MSc, Università degli Studi di Milano-Bicocca**
 
