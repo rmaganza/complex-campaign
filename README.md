@@ -14,3 +14,5 @@ Final project for the Complex Data Analysis course by:
 
 The goal of the project was to forecast the probability of click rate on ad banners.
 Real (masked) data was used coming from an automotive campaign.
+
+You can refer to the *.pptx* file for conclusions.
