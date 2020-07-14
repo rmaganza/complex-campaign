@@ -8,7 +8,7 @@ Final project for the Complex Data Analysis course by:
 
 *Matteo Petrovich*
 
-*Massimiliano Rubino*
+[*Massimiliano Rubino*](https://github.com/Max-Rubino)
 
 **Statistical and Economic Sciences BSc, Università degli Studi di Milano-Bicocca**
 
