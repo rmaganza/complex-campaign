@@ -20,7 +20,7 @@ clock.plot <- function (x, col = rainbow(n), ...) {
     b <- pi/2 - 2*pi/n*i
     polygon( c(0, x[i]*cos(a+ca), 0), c(0, x[i]*sin(a+ca), 0), col=col[i] )
     v <- .1
-    text((1+v)*cos(a), (1+v)*sin(a), names(x)[i])
+    text((1+v)*cos(a), (1+v)*sin(a), names(x)[i], col='white')
   }
 }
 
@@ -44,5 +44,8 @@ for (index in indexes_hour) {
   sumvector <- append(sumvector, sumh)
 }
 
-cols <- colorRampPalette(brewer.pal(9, "PuBuGn"))(24)
-clock.plot(sumvector, main = "Number of unique users for each hour of day", col=cols)
+par(bg=NA)
+cols <- colorRampPalette(brewer.pal(9, "RdYlBu"))(24)
+cols <- c(tail(cols, 6), head(cols, -6))
+clock.plot(sumvector, col=cols)
+
